@@ -1,0 +1,9 @@
+'.source.python':
+  'shebang':
+    'prefix': 'shebang'
+    'body': '#!/usr/bin/env python3'
+  'print':
+    'prefix': 'pr'
+    'body': 'print($1, $2)'
+
+

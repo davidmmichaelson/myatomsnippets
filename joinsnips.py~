@@ -1,0 +1,14 @@
+import os
+
+TARGET_FILE = "snippets.cson"
+
+try:
+    with open(TARGET_FILE, "w+") as join:
+        for _, _, files in os.walk(os.getcwd()):
+            for file in files:
+                if file.split('_')[0] is 'snip':
+                    with open(file) as f:
+                        join.write('\n\n' + f.read())
+                        print(f"Joined `{file}` to `{TARGET_FILE}`")
+except Exception as err:
+    raise err
